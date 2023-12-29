@@ -76,3 +76,7 @@
       border-bottom: 25px solid transparent;
     
     }
+
+    ul{
+      overflow-x: hidden;
+    }

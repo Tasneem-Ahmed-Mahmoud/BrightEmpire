@@ -3,17 +3,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\FleetController;
 use App\Http\Controllers\Dashboard\ImageController;
+use App\Http\Controllers\Dashboard\ContactController;
 use App\Http\Controllers\Dashboard\FeatureController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\ServiceController;
 use App\Http\Controllers\Dashboard\CategoryController;
 ####################  Auth #################################
-Route::controller(AuthController::class)->group(function () {   
-    Route::get('/login', 'login_form');
-    Route::post('/login', 'login')->name('login');
-  
-    });
 
+ Route::get('/login',[AuthController::class, 'login_form'])->name('admin-login');
+ Route::post('/login',[AuthController::class, 'login'])->name('login');
+//  ###############################################
 Route::prefix('dashboard')->middleware('auth')->group(function(){
 
     // logout
@@ -77,12 +76,19 @@ Route::controller(ProfileController::class)->prefix('profile')->group(function (
 });
 
 
-Route::get('/admin',function(){
-    return view('dashboard.index');
-})->name('dashboard');
 
+#################### Contact #################################
+Route::controller(ContactController::class)->prefix('messages')->name('messages.')->group(function () {
+    Route::get('', 'index')->name('index');
+    Route::delete('/{contact}', 'destroy')->name('destroy');
+  
+});
 
 
 
 
 });
+Route::get('/home',function(){
+    return view('dashboard.index');
+})->name('dashboard')->middleware('auth');
+

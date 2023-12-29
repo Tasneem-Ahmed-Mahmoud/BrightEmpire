@@ -17,41 +17,37 @@ class FleetSeeder extends Seeder
     $description="Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc";
       $fleets=[
 
+            [
+                'name'=>"Stretch Escalade/ H2",
+                'description'=>"There’s no such thing as too much of a good thing.
 
-
-
-
-
-        [
-            'name'=>'Stretch Escalade/ H2',
-            'description'=>'The GMC Yukon and Chevy Suburban, the best luxurious SUV by any standards can accommodate 6 to 7 passengers with luggage.
-    
-            All of our SUV’s have black exterior and interior.
-            
-            Let us be your central point of contact for all of your limo transportation needs.
-            
-            SUV are considered business and family friendly vehicle because It has of all those necessary features which you need during your trip to feel the comfort and luxury.
-            
-            Bright Empire Limousine offers 24-hour, 7 days a week luxury SUV service availability.',
-            'photo'=>'Stretch-EscaladeH2.jpeg',
-            'alt'=>'Stretch-Escalade/H2',
-            'url'=>"Stretch-Escalade/H2",
-            'title'=>'Stretch Escalade/ H2',
-            "seo_description"=>$description,
-            'features'=>[
-                ['name'=>'6-7 Passengers'],
-                ['name'=>'Luggage 8-10 Small or 7-8 Large'],
-                ['name'=>'Plush leather seating'],
-    
-                ['name'=>'Rear Armrest and Drink Holders'],
-                ['name'=>"AM/FM Stereo & CD player"]
-            ]
-    
-            ],
-
-
-
-
+                It always leaves you wanting more.
+                
+                And our 20-passenger Cadillac Escalade stretch SUV limo is no exception.
+                
+                While a standard Cadillac Escalade epitomizes luxury and sophistication, our Cadillac Escalade stretch SUV limo amps up the fun .
+                
+                big time! The high-output premium audio/video entertainment system, LED ceiling and floor lighting and laser and strobe effects will have you rockin’ down the road.
+                
+                And the RGB ground effects lighting and jet door will help ensure you make a grand entrance.
+                
+                So if you're looking to get the party started before the party, then the Cadillac Escalade stretch SUV limo is the only way to travel.
+                
+                ",
+                'photo'=>'Stretch-EscaladeH2.jpeg',
+                "alt"=>"ESCALADE STRETCH",
+                "url"=>"stretch-escalade",
+                "title"=>"ESCALADE STRETCH",
+                "seo_description"=>$description,
+                "features"=>[
+                    ["name"=>"20 Passengers"],
+                    ["name"=>"Luggage 3-4 Large Or 4-5 Small"],
+                    ["name"=>"Plush Leather Seating"],
+                    ["name"=>"AM/FM Stereo & C/D Player"],
+                    ["name"=>"Privacy Partition - Color T.V"],
+                    ["name"=>"Fiber Optic Lighting"]
+                ]
+                ],
 
 
        [
@@ -203,37 +199,7 @@ class FleetSeeder extends Seeder
 
 
 
-                                [
-                                    'name'=>"ESCALADE STRETCH",
-                                    'description'=>"There’s no such thing as too much of a good thing.
-
-                                    It always leaves you wanting more.
-                                    
-                                    And our 20-passenger Cadillac Escalade stretch SUV limo is no exception.
-                                    
-                                    While a standard Cadillac Escalade epitomizes luxury and sophistication, our Cadillac Escalade stretch SUV limo amps up the fun .
-                                    
-                                    big time! The high-output premium audio/video entertainment system, LED ceiling and floor lighting and laser and strobe effects will have you rockin’ down the road.
-                                    
-                                    And the RGB ground effects lighting and jet door will help ensure you make a grand entrance.
-                                    
-                                    So if you're looking to get the party started before the party, then the Cadillac Escalade stretch SUV limo is the only way to travel.
-                                    
-                                    ",
-                                    "photo"=>"ESCALADE-STRETCH.jpg",
-                                    "alt"=>"ESCALADE STRETCH",
-                                    "url"=>"ESCALADE-STRETCH",
-                                    "title"=>"ESCALADE STRETCH",
-                                    "seo_description"=>$description,
-                                    "features"=>[
-                                        ["name"=>"20 Passengers"],
-                                        ["name"=>"Luggage 3-4 Large Or 4-5 Small"],
-                                        ["name"=>"Plush Leather Seating"],
-                                        ["name"=>"AM/FM Stereo & C/D Player"],
-                                        ["name"=>"Privacy Partition - Color T.V"],
-                                        ["name"=>"Fiber Optic Lighting"]
-                                    ]
-                                    ],
+                           
 
             
 

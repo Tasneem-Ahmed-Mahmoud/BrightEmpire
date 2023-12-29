@@ -102,6 +102,17 @@
                                 </ul>
                             </div>
                         </li>
+
+                        <li>
+                            <a href="{{ route('about') }}">About Us</a>
+                        </li>
+                       
+                        <li>
+                            <a href="{{ route('blogs') }}">Blog</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('contact.show') }}">Contact</a>
+                        </li>
                         
                     </ul>
                 </nav>

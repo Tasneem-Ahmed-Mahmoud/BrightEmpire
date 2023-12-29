@@ -1,6 +1,6 @@
 @php
-    $description=$service->seo->description;
-    
+$description=$service->seo->description;
+
 @endphp
 @extends('frontend.layout.master')
 @section('title', $service->seo->title)
@@ -19,24 +19,25 @@
                     <div class="title-line"></div>
                 </div>
             </div>
-          
-              <!-- start 1 -->
-              <div class="row justify-content-between pb-5">
+
+            <!-- start 1 -->
+            <div class="row justify-content-between pb-5">
                 <div class=" col-lg-6 col-12 mb-5">
                     <div class="card border-0 me-lg-5">
-                        <img src="{{ asset(asset($service::PATH.$service->image->name)) }}" alt="{{ $service->image->alt }}">
+                        <img src="{{ asset(asset($service::PATH.$service->image->name)) }}"
+                            alt="{{ $service->image->alt }}">
                     </div>
                 </div>
 
                 <div class=" col-lg-6 col-12 mb-5 order-2 order-lg-1">
-                    <div >
+                    <div>
                         <h2 class=" services-title text-capitalize mb-4">{{ $service->title }}</h2>
-                        <div >
+                        <div>
 
                             @foreach (splitParagraph($service->description) as $text )
                             <p>{{ $text .'.'}}</p>
                             @endforeach
-                         
+
                             <a href="{{ route('system.reservation') }}" class="btn main-btn mt-4">Make Reservation</a>
                         </div>
                     </div>

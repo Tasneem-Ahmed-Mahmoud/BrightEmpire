@@ -168,7 +168,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"Maximize your time.jpg",
                     "alt"=>"Maximize your time",
                     'category_id'=>1,
-                    'url'=>"limo-service-new-york",
+                    'url'=>"vip-transportation",
                     'seo_title'=>"best car service nyc",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car ,with best car service nyc limo service nyc "
                   ],
@@ -183,7 +183,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"prom.jpg",
                     "alt"=>"prom",
                     'category_id'=>1,
-                    'url'=>"vip-transportation",
+                    'url'=>"prom",
                     'seo_title'=>"empire limo nyc",
                     "seo_description"=>"empire limo nyc"
                   ],
@@ -199,7 +199,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"JFK.jpg",
                     "alt"=>"airport JFK",
                     'category_id'=>2,
-                    'url'=>"car-service-to-JFK",
+                    'url'=>"car-service-to-jfk",
                     'seo_title'=>"Car Service to JFK Airport",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],
@@ -214,7 +214,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"airport.jpg",
                     "alt"=>"airport",
                     'category_id'=>2,
-                    'url'=>"car-service-to-LGA",
+                    'url'=>"car-service-to-lga",
                     'seo_title'=>"Car Service to LGA Airpor",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],
@@ -229,7 +229,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"ewr.jpg",
                     "alt"=>"airport ewr",
                     'category_id'=>2,
-                    'url'=>"car-service-to-EWR",
+                    'url'=>"car-service-to-ewr",
                     'seo_title'=>"Car Service to EWR Airport",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer ny"
                   ],
@@ -244,7 +244,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"teb.jpg",
                     "alt"=>"airport teb",
                     'category_id'=>2,
-                    'url'=>"car-service-to-TEB",
+                    'url'=>"car-service-to-teb",
                     'seo_title'=>"Car Service to Teterboro Airport",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],
@@ -262,7 +262,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"hpn.jpg",
                     "alt"=>"hpn",
                     'category_id'=>2,
-                    'url'=>"car-service-to-HPN",
+                    'url'=>"car-service-to-hpn",
                     'seo_title'=>"Car Service to HPN Airport",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],
@@ -285,7 +285,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"Brooklyn1.jpg",
                     "alt"=>"Brooklyn1",
                     'category_id'=>3,
-                    'url'=>"limo-service-between-NYC-and-Brooklyn",
+                    'url'=>"limo-service-between-nyc-and-brooklyn",
                     'seo_title'=>"car service brooklyn",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],
@@ -300,7 +300,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"Staten.jpg",
                     "alt"=>"Staten",
                     'category_id'=>3,
-                    'url'=>"limo-service-between-NYC-and-Staten-Island",
+                    'url'=>"limo-service-between-nyc-and-staten-island",
                     'seo_title'=>"Limo Service between NYC and Staten Island",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],
@@ -330,7 +330,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"Bronx.jpg",
                     "alt"=>"Bronx",
                     'category_id'=>3,
-                    'url'=>"limo-service-between-NYC-and-The-Bronx",
+                    'url'=>"limo-service-between-nycC-and-The-bronx",
                     'seo_title'=>"Limo Service between NYC and The Bronx",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],
@@ -343,7 +343,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"Queens.jpg",
                     "alt"=>"Queens",
                     'category_id'=>3,
-                    'url'=>"limo-service-between-NYC-and-Queens",
+                    'url'=>"limo-service-between-nyc-and-queens",
                     'seo_title'=>"Limo Service between NYC and Queens",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],
@@ -360,7 +360,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"Manhattan.jpg",
                     "alt"=>"Manhattan.jpg",
                     'category_id'=>3,
-                    'url'=>"limousine-service-in-Manhattan",
+                    'url'=>"limousine-service-in-manhattan",
                     'seo_title'=>"Limousine Service in Manhattan",
                     "seo_description"=>"new york car service"
                   ],
@@ -394,7 +394,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"Washington.jpg",
                     "alt"=>"Washington.jpg",
                     'category_id'=>4,
-                    'url'=>"limousine-service-to-washington-DC",
+                    'url'=>"limousine-service-to-washington-dc",
                     'seo_title'=>"Limousine Service to Washington DC",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],

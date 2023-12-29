@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('frontend.layout.master')
 @section('content')
 
 {{-- <a href="https://book.mylimobiz.com/v4/brightempire/account/loginnow" data-ores-widget="website" data-ores-alias="brightempire"></a>  --}}

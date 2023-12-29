@@ -12,10 +12,13 @@
         <div class="row">
             <div class="col-12  d-flex text-center align-items-center flex-column ">
                 <h1 class="text-uppercase fw-semibold display-1 "> Bright Empire</h1>
-                <p class="text-white mt-3 mb-4 text-capitalize  w-50 text-center ">The best limousine company with professional drivers proudly serving NYC and the TRI state area for decades</p>
-                <div class="">
-                    <a href="{{ route('system.reservation') }}" class="btn btn-brand me-2 main-btn">Make Reservation</a>
-                    <a href="{{ route('system.register') }}" class="btn btn-light ms-2 secondary-btn mt-2 mt-sm-0">Create Account</a>
+                <p class="text-white mt-3 mb-4 text-capitalize  w-50 text-center ">The best limousine company with
+                    professional drivers proudly serving NYC and the TRI state area for decades</p>
+                <div class="text-center">
+                    <a href="{{ route('system.reservation') }}" class="btn btn-brand me-md-2 main-btn">Make
+                        Reservation</a>
+                    <a href="{{ route('system.register') }}"
+                        class="btn btn-light ms-md-2 secondary-btn mt-md-0 mt-2 ">Create Account</a>
                 </div>
             </div>
         </div>
@@ -37,8 +40,8 @@
             </div>
 
             @foreach ( $services as $service)
-                
-          
+
+
             <!-- start -->
             <div class="col-md-4 col-sm-6 p-2">
 
@@ -46,7 +49,8 @@
                     <div class="content">
                         <figure class="mb-0">
 
-                            <img src="{{ asset($service::PATH.$service->image->name) }}" alt="{{ $service->image->alt }}" class="w-100" srcset="" height="300px">
+                            <img src="{{ asset($service::PATH.$service->image->name) }}"
+                                alt="{{ $service->image->alt }}" class="w-100" srcset="" height="300px">
                         </figure>
                         <h6 class="title text-center py-3 mt-0">{{ $service->name }}</h6>
                     </div>
@@ -54,8 +58,8 @@
 
             </div>
             <!-- end-->
-           
-           
+
+
             @endforeach
         </div>
     </div>
@@ -73,7 +77,7 @@
                 <div class="title-line"></div>
             </div>
 
-@foreach ($fleets as $fleet )
+            @foreach ($fleets as $fleet )
 
             <!-- start -->
             <div class="col-md-4 col-sm-6 p-2">
@@ -81,7 +85,8 @@
                 <a href="{{ route('fleets',$fleet->seo->url) }}">
                     <div class="content">
                         <figure class="mb-0">
-                            <img src="{{asset($fleet::PATH.$fleet->photo)}}" alt="{{ $fleet->alt }}" class="w-100" srcset="" height="300px">
+                            <img src="{{asset($fleet::PATH.$fleet->photo)}}" alt="{{ $fleet->alt }}" class="w-100"
+                                srcset="" height="300px">
                         </figure>
                         <h6 class="title text-center py-3 mt-0">{{ $fleet->name }}</h6>
                     </div>
@@ -89,10 +94,10 @@
 
             </div>
             <!-- end-->
-              
-    
-@endforeach
-               
+
+
+            @endforeach
+
 
         </div>
     </div>
@@ -118,9 +123,11 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <span class="fs-5 text-white">Based on <a href="https://maps.app.goo.gl/tBA2GMzCSd2kpHzw9?g_st=iw" class=" text-decoration-underline ">google reviews</a></span>
+                    <span class="fs-5 text-white">Based on <a href="https://maps.app.goo.gl/tBA2GMzCSd2kpHzw9?g_st=iw"
+                            class=" text-decoration-underline ">google reviews</a></span>
                     <figure class="google-icon mt-3">
-                        <a href="https://maps.app.goo.gl/tBA2GMzCSd2kpHzw9?g_st=iw"><img src="{{asset('frontend/assets/images/googlelogo_color.png')}}" alt=" google icon"></a>
+                        <a href="https://maps.app.goo.gl/tBA2GMzCSd2kpHzw9?g_st=iw"><img
+                                src="{{asset('frontend/assets/images/googlelogo_color.png')}}" alt=" google icon"></a>
                     </figure>
                 </div>
             </div>
@@ -133,7 +140,7 @@
                             <img src="{{asset('frontend/assets/images/client/1.png')}}" alt="limousin client review">
                         </div>
                         <div class="px-2 card-content d-flex justify-content-center align-items-center flex-column">
-                            <h2>Yes No</h2>
+                            <h2>Simon Wiedman</h2>
 
                             <div class="starts ">
                                 <i class="fa-solid fa-star fs-6"></i>
@@ -143,8 +150,8 @@
                                 <i class="fa-solid fa-star fs-6"></i>
                             </div>
                             <p>
-                                This is a very great TLC company, has a team that is helpful and patience, not to mention their work ethic and skills! Very recommended if you need a ride to a place, and is worried!
-
+                                Noor was an amazing driver. Very professional and an excellent experience. Will
+                                definitely be keeping him on speed dial.
                             </p>
 
                         </div>
@@ -158,7 +165,7 @@
 
                         </div>
                         <div class="px-2 card-content d-flex justify-content-center align-items-center flex-column">
-                            <h2>Pam Delucia</h2>
+                            <h2>Angeliki Tsangari</h2>
 
                             <div class="starts ">
                                 <i class="fa-solid fa-star fs-6"></i>
@@ -168,7 +175,7 @@
                                 <i class="fa-solid fa-star fs-6"></i>
                             </div>
                             <p>
-                                Hassan drove us around NYC all day and he was so patient and helpful during our last minute adventure. He truly added to our NYC experience. We highly recommend him.
+                                Excellent! Thank you.
                             </p>
 
                         </div>
@@ -183,7 +190,7 @@
 
                         </div>
                         <div class="px-2 card-content d-flex justify-content-center align-items-center flex-column">
-                            <h2>dustin liu</h2>
+                            <h2>Linda Gagnon</h2>
 
                             <div class="starts ">
                                 <i class="fa-solid fa-star fs-6"></i>
@@ -193,7 +200,9 @@
                                 <i class="fa-solid fa-star fs-6"></i>
                             </div>
                             <p>
-                                Very comfortable car, arrived on time and took me and my family to lga airport, the driver is also very professional, I think I will still choose this company next time I come to New York
+
+                                The driver was so nice, sharing his story of his life which I felt privileged to hear.
+                                It made the drive go by fast. He was polite and helpful
                             </p>
 
                         </div>
@@ -209,7 +218,7 @@
 
                         </div>
                         <div class="px-2 card-content d-flex justify-content-center align-items-center flex-column">
-                            <h2>mahfuzul azam</h2>
+                            <h2>Eveliina Russell</h2>
 
                             <div class="starts ">
                                 <i class="fa-solid fa-star fs-6"></i>
@@ -219,7 +228,9 @@
                                 <i class="fa-solid fa-star fs-6"></i>
                             </div>
                             <p>
-                                awesome service, best in the town.the chauffeurs are very friendly and professional as well. i really like Bright Empire Limousine
+                                Thank you so much for absolutely the best ride from JFK to the city!! Hassan Badawi was
+                                the best driver, kind, helpful, and a great driver ! Very clean car and waters:) will
+                                use him again :) he also was a great “tour guide” and showed us the city! Thank you
                             </p>
 
                         </div>
@@ -252,12 +263,14 @@
                     <!-- start accordion-item 1-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>Where do I meet my driver at the airport?</h5>
                             </button>
                         </h2>
-                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <h6>
                                     There are two options for meeting your driver at the
@@ -313,7 +326,8 @@
                     <!-- start accordion-item 2-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>
                                     For airport pickups, do I need to reserve a car in advance
@@ -339,7 +353,8 @@
                     <!-- start accordion-item 3 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>Will I get a call when my car arrives?</h5>
                             </button>
@@ -359,7 +374,8 @@
                     <!-- start accordion-item 4-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>What do I do if I do not find my driver?</h5>
                             </button>
@@ -379,7 +395,8 @@
                     <!-- start accordion-item 5-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>
                                     What are the passenger and luggage capacities of the
@@ -404,7 +421,8 @@
                     <!-- start accordion-item 6-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>
                                     What is the standard gratuity (TIP) you charge or every
@@ -428,7 +446,8 @@
                     <!-- start accordion-item 7-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>Are you closed on any major holidays?</h5>
                             </button>
@@ -446,7 +465,8 @@
                     <!-- start accordion-item 8-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>Do you provide child seats in your vehicles?</h5>
                             </button>
@@ -463,7 +483,8 @@
                     <!-- start accordion-item 9-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>
                                     What time should I leave my home/office to catch my
@@ -489,7 +510,8 @@
                     <!-- start accordion-item 10-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>Do you track my Flight?</h5>
                             </button>
@@ -506,7 +528,8 @@
                     <!-- start accordion-item 11-->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
                                 <i class="fas fa-minus accordion-icon"></i>
                                 <h5>Will I be charged exactly what I was quoted?</h5>
                             </button>
@@ -528,6 +551,56 @@
 </section>
 
 
+
+
+
+
+
+
+
+
+
+
+<!-- ######## ser ########################-->
+
+
+<section class="car-service-nyc section-bottom section-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12 p-2">
+                <a href="{{ route('car-service-nyc') }}">
+                    <div class="service__content">
+                        <img src="{{ asset('frontend/assets/images/services/car-service-nyc.jpg') }}" class="w-100"
+                            alt="Limousine Service car">
+                        <h3 class="title">car service nyc </h3>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="col-md-6 col-12 p-2">
+                <a href="{{ route('limo-service-nyc') }}">
+                    <div class="service__content">
+                        <img src="{{ asset('frontend/assets/images/services/limo-service-nyc.jpg') }}" class="w-100"
+                            alt="Limousine Service nyc ">
+                        <h3 class="title"> limo service nyc</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class=" col-12 p-2">
+                <a href="">
+                    <div class="service__content">
+                        <img src="{{ asset('frontend/assets/images/services/airport.jpg') }}" class="w-100"
+                            alt="Limousine Service car">
+                        <h3 class="title">airport transfer nyc </h3>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
 
 @section('script')

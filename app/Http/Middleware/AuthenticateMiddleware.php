@@ -19,7 +19,7 @@ class AuthenticateMiddleware
           // Check if the user is authenticated
           if (!Auth::check()) {
             // Redirect or return an unauthorized response
-            return redirect()->route('login'); // Example: Redirect to login page
+            return redirect()->route('admin-login'); // Example: Redirect to login page
             // OR
             // return response()->json(['error' => 'Unauthorized'], 401);
         }

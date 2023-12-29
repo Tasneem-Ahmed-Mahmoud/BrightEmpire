@@ -35,7 +35,7 @@ class CategorySeeder extends Seeder
                 Kennedy International Airport (JFK), LaGuardia Airport (LGA), and Newark Liberty International Airport (EWR).
                 
                 Our chauffeurs will track your flight, ensuring an on-time pickup and drop-off for a hassle-free travel experience.",
-                "url" => "airport-car-service",
+                "url" => "airport-transfer-nyc",
                 "seo_title" => "nyc airport shuttle",
                 "seo_description" => "nyc airporter shuttle"
             ],

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
   <!-- css -->
   @yield('style')
-  <link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}">
+ 
     <link rel="stylesheet" href="{{asset('frontend/assets/css/new-style.css')}}">
   <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
   <script>
@@ -61,4 +61,4 @@ navBar.forEach((ele )=> {
 
 <body>
 
- 
+  @include('sweetalert::alert')

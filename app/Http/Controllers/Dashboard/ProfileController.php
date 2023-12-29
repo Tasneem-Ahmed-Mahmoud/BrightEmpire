@@ -34,7 +34,8 @@ class ProfileController extends Controller
     }
     public function updatePassword(UpdatePasswordRequest $request)
     {
-        dd($request->all());
+       
+     
         $user = Auth::user();
         if (!Hash::check($request->current_password, $user->password)) {
             return redirect()->back()->withErrors(['current_password' => 'The current password is incorrect']);
@@ -45,3 +46,5 @@ class ProfileController extends Controller
         return redirect()->back();
     }
 }
+
+
