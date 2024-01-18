@@ -135,12 +135,15 @@
                 <i id="left-icon" class=" arrow fa-solid arrow-icon fa-angle-left"></i>
                 <ul class="carousel">
                     <!-- start 1-->
+                    @foreach ($reviews as $review )
+                        
+                
                     <li class="card" draggable="false">
                         <div class="card-img mt-3 py-2">
-                            <img src="{{asset('frontend/assets/images/client/1.png')}}" alt="limousin client review">
+                            <img src="{{asset($review::PATH.$review->image->name)}}" alt="{{ $review->image->alt }}">
                         </div>
                         <div class="px-2 card-content d-flex justify-content-center align-items-center flex-column">
-                            <h2>Simon Wiedman</h2>
+                            <h2>{{ $review->name }}</h2>
 
                             <div class="starts ">
                                 <i class="fa-solid fa-star fs-6"></i>
@@ -150,93 +153,21 @@
                                 <i class="fa-solid fa-star fs-6"></i>
                             </div>
                             <p>
-                                Noor was an amazing driver. Very professional and an excellent experience. Will
-                                definitely be keeping him on speed dial.
+                             {{$review->message}}
                             </p>
 
                         </div>
                     </li>
+                    @endforeach
 
 
-                    <!-- item 2 -->
-                    <li class="card" draggable="false">
-                        <div class="card-img mt-3 py-2">
-                            <img src="{{asset('frontend/assets/images/client/2.png')}}" alt="limousine client review">
-
-                        </div>
-                        <div class="px-2 card-content d-flex justify-content-center align-items-center flex-column">
-                            <h2>Angeliki Tsangari</h2>
-
-                            <div class="starts ">
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                            </div>
-                            <p>
-                                Excellent! Thank you.
-                            </p>
-
-                        </div>
-                    </li>
-
-
-
-                    <!--item 3 -->
-                    <li class="card" draggable="false">
-                        <div class="card-img mt-3 py-2">
-                            <img src="{{asset('frontend/assets/images/client/3.png')}}" alt="limousine client logo">
-
-                        </div>
-                        <div class="px-2 card-content d-flex justify-content-center align-items-center flex-column">
-                            <h2>Linda Gagnon</h2>
-
-                            <div class="starts ">
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                            </div>
-                            <p>
-
-                                The driver was so nice, sharing his story of his life which I felt privileged to hear.
-                                It made the drive go by fast. He was polite and helpful
-                            </p>
-
-                        </div>
-                    </li>
+                 
 
 
 
 
-                    <!--item 4 -->
-                    <li class="card" draggable="false">
-                        <div class="card-img mt-3 py-2">
-                            <img src="{{asset('frontend/assets/images/client/4.png')}}" alt="limousine client logo">
 
-                        </div>
-                        <div class="px-2 card-content d-flex justify-content-center align-items-center flex-column">
-                            <h2>Eveliina Russell</h2>
-
-                            <div class="starts ">
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                                <i class="fa-solid fa-star fs-6"></i>
-                            </div>
-                            <p>
-                                Thank you so much for absolutely the best ride from JFK to the city!! Hassan Badawi was
-                                the best driver, kind, helpful, and a great driver ! Very clean car and waters:) will
-                                use him again :) he also was a great “tour guide” and showed us the city! Thank you
-                            </p>
-
-                        </div>
-                    </li>
-
-
+ 
                 </ul>
 
                 <i id="right-icon" class=" arrow fa-solid arrow-icon fa-angle-right"></i>
@@ -589,7 +520,7 @@
             </div>
 
             <div class=" col-12 p-2">
-                <a href="">
+                <a href="{{ route('service','airport-transfer-nyc') }}">
                     <div class="service__content">
                         <img src="{{ asset('frontend/assets/images/services/airport.jpg') }}" class="w-100"
                             alt="Limousine Service car">

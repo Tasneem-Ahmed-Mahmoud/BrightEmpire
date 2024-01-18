@@ -1,13 +1,16 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\AuthController;
+use App\Http\Controllers\Dashboard\HomeController;
 use App\Http\Controllers\Dashboard\FleetController;
 use App\Http\Controllers\Dashboard\ImageController;
+use App\Http\Controllers\Dashboard\ReviewController;
 use App\Http\Controllers\Dashboard\ContactController;
 use App\Http\Controllers\Dashboard\FeatureController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\ServiceController;
 use App\Http\Controllers\Dashboard\CategoryController;
+
 ####################  Auth #################################
 
  Route::get('/login',[AuthController::class, 'login_form'])->name('admin-login');
@@ -35,6 +38,8 @@ Route::controller(ServiceController::class)->prefix('services')->name('services.
     Route::get('/{service}', 'edit')->name('edit');
     Route::put('/{service}', 'update')->name('update');
     Route::delete('/{service}', 'destroy')->name('destroy');
+    // Route::get('/filter', 'filterByCategory')->name('filter');
+
   
 });
 
@@ -85,10 +90,20 @@ Route::controller(ContactController::class)->prefix('messages')->name('messages.
 });
 
 
-
+####################  Review #################################
+Route::controller(ReviewController::class)->prefix('reviews')->name('reviews.')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/create', 'create')->name('create');
+    Route::post('/', 'store')->name('store');
+    Route::get('/{review}', 'edit')->name('edit');
+    Route::put('/{review}', 'update')->name('update');
+    Route::delete('/{review}', 'destroy')->name('destroy');
+  
+});
 
 });
-Route::get('/home',function(){
-    return view('dashboard.index');
-})->name('dashboard')->middleware('auth');
 
+#################### home #################################
+Route::get('/home',[HomeController::class,'index'])->name('dashboard')->middleware('auth');
+
+Route::get('/services/filter', [ServiceController::class,'filterByCategory'])->name('services.filter');

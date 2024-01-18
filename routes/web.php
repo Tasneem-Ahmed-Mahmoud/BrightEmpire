@@ -19,6 +19,78 @@ use App\Http\Controllers\Frontend\ContactController;
 include_once __DIR__ . '/dashboard.php';
 
 Route::get('/', [HomeController::class, 'index'])->name('landing');
+
+// ################# start redirect routs#########################################################################
+
+// #################limo services###########################
+Route::get('services/nyc-limo-services', function () {
+    return redirect()->route('service','night-in-town')->withStatus(302);
+});
+Route::get('services/limousine-services-nyc', function () {
+    return redirect()->route('service','travelling-with-kids')->withStatus(302);
+});
+Route::get('limousine-company', function () {
+    return redirect()->route('service','special-occasion')->withStatus(302);
+});
+Route::get('services/professional-drivers', function () {
+    return redirect()->route('service','luxury-limo-service')->withStatus(302);
+});
+
+Route::get('services/nyc-limo', function () {
+    return redirect()->route('service','wedding')->withStatus(302);
+});
+Route::get('services/limo-service-new-york', function () {
+    return redirect()->route('service','vip-transportation')->withStatus(302);
+});
+
+Route::get('empire-limo-nyc', function () {
+    return redirect()->route('service','prom')->withStatus(302);
+});
+// ##########Airport Car Service#########################
+Route::get('car-service-to-JFK', function () {
+    return redirect()->route('service','car-service-to-jfk')->withStatus(302);
+});
+Route::get('car-service-to-LGA', function () {
+    return redirect()->route('service','car-service-to-lga')->withStatus(302);
+});
+Route::get('car-service-to-EWR', function () {
+    return redirect()->route('service','car-service-to-ewr')->withStatus(302);
+});
+Route::get('car-service-to-TEB', function () {
+    return redirect()->route('service','car-service-to-teb')->withStatus(302);
+});
+Route::get('car-service-to-HPN', function () {
+    return redirect()->route('service','car-service-to-hpn')->withStatus(302);
+});
+// ##########Point To Point Transfer#########################
+Route::get('limo-service-between-NYC-and-Brooklyn', function () {
+    return redirect()->route('service','limo-service-between-nyc-and-brooklyn')->withStatus(302);
+});
+Route::get('limo-service-between-NYC-and-Staten-Island', function () {
+    return redirect()->route('service','limo-service-between-nyc-and-staten-island')->withStatus(302);
+});
+Route::get('limo-service-between-NYC-and-Queens', function () {
+    return redirect()->route('service','limo-service-between-nyc-and-queens')->withStatus(302);
+});
+Route::get('limousine-service-in-Manhattan', function () {
+    return redirect()->route('service','limousine-service-in-manhattan')->withStatus(302);
+});
+Route::get('limo-service-between-NYC-and-The-Bronx', function () {
+    return redirect()->route('service','limo-service-between-nyc-and-the-bronx')->withStatus(302);
+});
+
+// ##########Book By Area#########################
+Route::get('limousine-service-to-niagara-falls-and-upstate', function () {
+    return redirect()->route('service','limousine-service-to-niagara-falls-and-upstate')->withStatus(302);
+});
+Route::get('limousine-service-to-washington-DC', function () {
+    return redirect()->route('service','limousine-service-to-washington-dc')->withStatus(302);
+});
+Route::get('limousine-service-to-boston', function () {
+    return redirect()->route('service','limousine-service-to-boston')->withStatus(302);
+});
+
+// ################# end redirect routs#########################################################################
 #################### System #################################
 Route::controller(SystemController::class)->prefix('user')->name('system.')->group(function () {
     Route::get('/login', 'login')->name('login');
@@ -65,8 +137,20 @@ Route::get('blogs/sweet-16', function () {
 Route::get('blogs/navigating-local-limo-services', function () {
     return view('frontend/blogs/navigating-local');
 })->name('navigating-local');
-// ################# redirect###########################
-// redirect homepage
-Route::get('http://www.brightempirelimo.com',function(){
-    return redirect()->away('/', 302); 
- });Route::redirect('http://www.brightempirelimo.com', '/new-route');
+Route::get('blogs/transportation-to-airport', function () {
+    return view('frontend/blogs/transportation-to-airport');
+})->name('transportation-to-airport');
+
+Route::get('blogs/travel-with-best-limousine-service-brooklyn', function () {
+    return view('frontend/blogs/travel-with-best-limousine');
+})->name('travel-with-best-limousine');
+
+Route::get('blogs/unveiling-the-different-types-of-limos-services', function () {
+    return view('frontend/blogs/types-of-limousines');
+})->name('types-of-limousines');
+
+Route::get('blogs/navigate-nyc-in-luxury-at-an-affordable-price-for-limo', function () {
+    return view('frontend/blogs/navigate-nyc-in-luxury');
+})->name('navigate-nyc-in-luxury');
+
+ 

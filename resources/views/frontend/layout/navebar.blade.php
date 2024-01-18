@@ -45,7 +45,7 @@
         <div class="row v-center">
             <div class="header-item item-left">
                 <div class="logo">
-                    <a href=""><img src="{{ asset('frontend/assets/images/bright.png') }}" alt="" srcset=""></a>
+                    <a href=""><img src="{{ asset('frontend/assets/images/bright.jpeg') }}" alt="" srcset=""></a>
                 </div>
             </div>
             <!-- menu start here -->

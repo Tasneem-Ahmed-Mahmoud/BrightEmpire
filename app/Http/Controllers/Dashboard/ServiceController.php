@@ -12,15 +12,28 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ServiceController extends Controller
 {
-    
 
-    
+
+
     function index()
     {
         confirmDelete('delete', 'are you sure to delete?');
-        $services = Service::with(['category:id,name'])->paginate(10, ['id', 'name', 'description','category_id','title']);
+        $services = Service::with(['category:id,name'])->paginate(10, ['id', 'name', 'description', 'category_id', 'title']);
+        $categories = Category::get(['id', 'name']);
+        return view('dashboard.services.index', compact('services', 'categories'));
+    }
 
-        return view('dashboard.services.index', compact('services'));
+
+
+    public function filterByCategory(Request $request)
+    {
+        $categoryId = $request->input('category_id');
+      
+        // Assuming 'category_id' is the parameter you'll pass through AJAX
+        confirmDelete('delete', 'are you sure to delete?');
+        $services = Service::where('category_id', $categoryId)->get();
+        $categories = Category::get(['id', 'name']);
+        return view('dashboard.services.filter', compact('services', 'categories'));
     }
     function create()
     {
@@ -32,7 +45,7 @@ class ServiceController extends Controller
     function store(ServiceRequest $request)
     {
 
-   
+
         try {
             DB::transaction(function ($query) use ($request) {
                 $service = Service::create([
@@ -53,11 +66,11 @@ class ServiceController extends Controller
                 ]);
             });
         } catch (\Exception $e) {
-          
+
             Alert::error('error', 'Transaction failed: ' . $e->getMessage());
         }
 
-        Alert::success('success','stored successfully');
+        Alert::success('success', 'stored successfully');
         return to_route('services.index');
     }
 
@@ -70,11 +83,12 @@ class ServiceController extends Controller
     }
 
     function update(ServiceRequest $request, Service $service)
-    {
+    { $image = $request->hasFile('image') ? uploadImage($request->image, Service::PATH, $service->image->name) : $service->image->name;
+        // dd(uploadImage($request->image, Service::PATH, $old_image) );
 
         try {
-            DB::transaction(function () use ($request, $service) {
-                $old_image = $service->image->name;
+            DB::transaction(function () use ($request, $service,$image) {
+               
                 $service->update([
                     'name' => $request->name,
                     'description' => $request->description,
@@ -82,14 +96,15 @@ class ServiceController extends Controller
                     'title' => $request->title,
 
                 ]);
-                $service->image()->create([
-                    'name' => $request->hasFile('image') ? uploadImage($request->image, Service::PATH, $old_image) : $old_image,
+       
+                $service->image()->update([
+                    'name' => $image,
                     'alt' => $request->alt
                 ]);
                 $service->seo()->update([
                     'title' => $request->seo_title,
                     'description' => $request->seo_description,
-                    'url' =>$request->url
+                    'url' => $request->url
                 ]);
             });
         } catch (\Exception $e) {
@@ -110,15 +125,13 @@ class ServiceController extends Controller
                 $service->image()->delete();
                 $service->seo()->delete();
                 $service->delete();
-               
             });
         } catch (\Exception $e) {
             Alert::error('error', 'Transaction failed: ' . $e->getMessage());
         }
-        
+
         Alert::success('success', 'deleted successfully');
 
         return redirect()->back();
     }
-
 }

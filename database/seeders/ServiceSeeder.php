@@ -330,7 +330,7 @@ class ServiceSeeder extends Seeder
                     "image"=>"Bronx.jpg",
                     "alt"=>"Bronx",
                     'category_id'=>3,
-                    'url'=>"limo-service-between-nycC-and-The-bronx",
+                    'url'=>"limo-service-between-nyc-and-the-bronx",
                     'seo_title'=>"Limo Service between NYC and The Bronx",
                     "seo_description"=>"Luxurious. Comfortable. limousine service in New York. An exceptional experience in your journey with luxury car service nyc, limo service nyc and airport transfer nyc"
                   ],

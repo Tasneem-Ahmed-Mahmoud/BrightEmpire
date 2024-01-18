@@ -6,6 +6,7 @@ $description=$service->seo->description;
 @section('title', $service->seo->title)
 @section('style')
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/service-new.css') }}">
+
 @endsection
 @section('content')
 
@@ -15,7 +16,7 @@ $description=$service->seo->description;
         <div class="row justify-content-center">
             <div class="col-12 text-center pb-5">
                 <div class="col-12 ">
-                    <h3 class="main-title">{{ $service->name }}</h3>
+                    <h3 class="main-title text-gold">{{ $service->name }}</h3>
                     <div class="title-line"></div>
                 </div>
             </div>

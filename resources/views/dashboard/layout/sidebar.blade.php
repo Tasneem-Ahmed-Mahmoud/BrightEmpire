@@ -137,7 +137,31 @@
       </ul>
     </li>
      
+      {{-- Reviws --}}
+   
+
+     <li class="menu-item  ">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <div data-i18n="Dashboards"> Reviews</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item ">
+          <a href="{{ route('reviews.index') }}" class="menu-link">
+            <div data-i18n="Analytics">  Reviews</div>
+          </a>
+        </li>
+
+        <li class="menu-item ">
+          <a href="{{ route('reviews.create') }}" class="menu-link">
+            <div data-i18n="Analytics">Add Review</div>
+          </a>
+        </li>
       
+       
+      </ul>
+    </li>
+     
 
      {{-- message--}}
    

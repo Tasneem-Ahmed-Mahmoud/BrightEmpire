@@ -2,11 +2,34 @@
 
 @section('content')
 
-<div class="container-xxl flex-grow-1 container-p-y">
+<div class="container-xxl flex-grow-1 container-p-y"> 
     <h4 class="py-3 mb-4"><span class="text-muted fw-light">Tables /</span> Services</h4>
-
+      
     <!-- Basic Bootstrap Table -->
     <div class="card">
+      <div class="row justify-content-end ">
+        <div class="col-lg-3 col-sm-6 col-12">
+       
+          <div class="demo-inline-spacing">
+            <div class="btn-group" id="dropdown-icon-demo">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bx bx-menu me-1"></i>Filter By Categories
+              </button>
+              <ul class="dropdown-menu" >
+               @foreach ($categories as $category )
+               <li>
+                <a href="#" class="category-link" data-category-id="{{ $category->id }}" class="dropdown-item d-flex align-items-center"><i class="bx bx-chevron-right scaleX-n1-rtl"></i>{{ $category->name }}</a>
+             
+              </li>
+               @endforeach
+                
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+   
       <h5 class="card-header">Services</h5>
       <div class="table-responsive text-nowrap">
         <table class="table">
@@ -20,7 +43,7 @@
               <th >Actions</th>
             </tr>
           </thead>
-          <tbody class="table-border-bottom-0">
+          <tbody class="table-border-bottom-0" id="services">
            @foreach ($services as $service )
 
            <tr>
@@ -70,7 +93,7 @@
           <div class="modal-body">
             
            
-            <p>{{ $service->description }}</></p>
+            <p>{{ $service->description }}</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
@@ -103,4 +126,36 @@
 
      
 
+@endsection
+
+
+
+@section('script')
+
+<script>
+    $(document).ready(function() {
+        $('.category-link').on('click', function(e) {
+            e.preventDefault();
+            var categoryId = $(this).data('category-id');
+console.log(categoryId)
+            $.ajax({
+                url: '{{ route("services.filter") }}',
+                type: 'GET',
+                data: {
+                    category_id: categoryId
+                },
+                success: function(response) {
+                    // Handle the response, update the DOM with filtered services
+                    console.log(response); // For demonstration, log the response
+                    // Update the DOM with the filtered services
+                    // Example: Iterate through 'response' and display the services
+                    $("#services").html(response);
+                },
+                error: function(xhr, status, error) {
+                    // Handle errors
+                }
+            });
+        });
+    });
+</script>
 @endsection

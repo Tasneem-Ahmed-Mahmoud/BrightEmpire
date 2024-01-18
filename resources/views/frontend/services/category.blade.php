@@ -2,6 +2,14 @@
 @section('title', 'City-To-City Ground Transportation')
 @section('style')
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/service-new.css') }}">
+
+<style>
+   @media (max-width:500px){
+    .row>* {
+        padding-right: 0!important;
+    }
+   }
+</style>
 @endsection
 @section('content')
 
@@ -16,7 +24,7 @@
                 </div>
             </div>
             <!-- start 1-->
-            <div class="row justify-content-between pb-5 ">
+            <div class="row  justify-content-between pb-5 ">
 
                 <div class="  col-12 mb-5 ">
                     <div>
@@ -39,7 +47,7 @@
                         </div>
 
                     </div>
-                    <div class="col-12 row align-items-center ">
+                    <div class="col-12 row justify-content-center align-items-center ">
 
                         @foreach ($category->services as $service )
 

@@ -59,7 +59,7 @@
 
     <!-- Page JS -->
     <script src="{{ asset('dashboard')}}/assets/js/ui-modals.js"></script>
-
+@yield('script')
  
   </body>
 </html>

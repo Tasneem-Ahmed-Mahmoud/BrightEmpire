@@ -20,8 +20,127 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                {{-- start 1 --}}
-                <div class="row   blog-item ">
+
+
+
+                   {{-- start 8 --}}
+                   <div class="row   blog-item ">
+                    <div class="col-md-6 col-12 ps-md-0   pe-md-2 ">
+                        <div class="blog-image h-100 ">
+                            <img src="{{ asset('frontend/assets/images/blogs/affordable price for a limo-1.jpeg') }}" alt="affordable price for a limo"
+                                class="w-100 h-100 ">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 pt-5">
+                        <div class="blog-content">
+                            <a href="{{ route('navigate-nyc-in-luxury') }}">
+                                <h3 class="text-gold">Navigate NYC in luxury at an affordable price for a limo- Bright Empire </h3>
+                            </a>
+                           <p>
+                            New York is a huge city with vibrant and diverse streets, it's well known for its rich culture and modern civilization.
+
+Whether you are a resident or visitor you will find something special for you.
+
+                           </p>
+                            <div class="text-end mb-2">
+                                <a href="{{ route('navigate-nyc-in-luxury') }}" class="pe-3 text-gold"> Read More <i
+                                        class="ps-2 fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+
+                {{-- start 7 --}}
+                <div class="row   blog-item mt-5">
+                    <div class="col-md-6 col-12 ps-md-0   pe-md-2 ">
+                        <div class="blog-image h-100 ">
+                            <img src="{{ asset('frontend/assets/images/blogs/limousine-1.jpg') }}" alt="limousine"
+                                class="w-100 h-100 ">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 pt-5">
+                        <div class="blog-content">
+                            <a href="{{ route('types-of-limousines') }}">
+                                <h3 class="text-gold">Unveiling the different types of limos services- Bright Empire
+                                </h3>
+                            </a>
+                            <p>
+
+                                New York is a huge diverse and vibrant city where every inch reflects a thing of
+                                civilization and elegance.
+
+                                But, how to enjoy the journey when you are the driver who needs to deal with the traffic
+                                along the way?
+
+                            </p>
+                            <div class="text-end mb-2">
+                                <a href="{{ route('types-of-limousines') }}" class="pe-3 text-gold"> Read More <i
+                                        class="ps-2 fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                {{-- start 6 --}}
+                <div class="row   blog-item mt-5 ">
+                    <div class="col-md-6 col-12 ps-md-0   pe-md-2 ">
+                        <div class="blog-image h-100 ">
+                            <img src="{{ asset('frontend/assets/images/blogs/travel-with-best-limousine.jpeg') }}"
+                                alt="travel-with-best-limousine" class="w-100 h-100 ">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 pt-5">
+                        <div class="blog-content">
+                            <a href="{{ route('travel-with-best-limousine') }}">
+                                <h3 class="text-gold">Travel With Best Limousine Service Brooklyn - Bright Empire</h3>
+                            </a>
+                            <p> Brooklyn the city of Kings!
+
+                                Brooklyn is one of the 5 boroughs in New York City and the second largest one. Although
+                                Brooklyn is part of New York, Brooklyn has its own beautiful appearance with stunning
+                                architecture and rich culture.
+
+
+                            </p>
+                            <div class="text-end mb-2">
+                                <a href="{{ route('travel-with-best-limousine') }}" class="pe-3 text-gold"> Read More <i
+                                        class="ps-2 fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {{-- start 5 --}}
+                <div class="row   blog-item mt-5 ">
+                    <div class="col-md-6 col-12 ps-md-0   pe-md-2 ">
+                        <div class="blog-image h-100 ">
+                            <img src="{{ asset('frontend/assets/images/blogs/transportation-to-airport.jpeg') }}"
+                                alt="transportation-to-airport" class="w-100 h-100 ">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 pt-5">
+                        <div class="blog-content">
+                            <a href="{{ route('transportation-to-airport') }}">
+                                <h3 class="text-gold">Navigating
+                                    How To Choose The Best Transportation To Airport Service - Bright Empire</h3>
+                            </a>
+                            <p>When it comes to Preparing for a new flight first thing you think about is how to
+                                transport to the airport and arrive on time. That’s where transportation to airport
+                                service comes in.</p>
+                            <div class="text-end mb-2">
+                                <a href="{{ route('transportation-to-airport') }}" class="pe-3 text-gold"> Read More <i
+                                        class="ps-2 fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {{-- start 4 --}}
+                <div class="row   blog-item mt-5">
                     <div class="col-md-6 col-12 ps-md-0   pe-md-2 ">
                         <div class="blog-image h-100 ">
                             <img src="{{ asset('frontend/assets/images/blogs/advantages-of-hiring-a-limo-service.jpg') }}"
@@ -50,7 +169,7 @@
 
 
 
-                {{-- start 2 --}}
+                {{-- start 3 --}}
                 <div class="row   blog-item  mt-5">
                     <div class="col-md-6 col-12 ps-md-0   pe-md-2 ">
                         <div class="blog-image h-100 ">
@@ -77,7 +196,7 @@
 
                 </div>
 
-                {{-- start 3 --}}
+                {{-- start 2 --}}
                 <div class="row   blog-item  mt-5">
                     <div class="col-md-6 col-12 ps-md-0   pe-md-2 ">
                         <div class="blog-image h-100 ">
@@ -104,7 +223,7 @@
 
                 </div>
 
-                {{-- start 4 --}}
+                {{-- start 1--}}
                 <div class="row   blog-item  mt-5">
                     <div class="col-md-6 col-12 ps-md-0   pe-md-2 ">
                         <div class="blog-image h-100 ">
@@ -134,7 +253,7 @@
 
             </div>
 
-           @include("frontend.blogs.related-posts")
+            @include("frontend.blogs.related-posts")
         </div>
     </div>
 </section>

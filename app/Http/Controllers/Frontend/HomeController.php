@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Fleet;
+use App\Models\Review;
 use App\Models\Service;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -16,7 +17,8 @@ class HomeController extends Controller
 
     $fleets = Fleet::with('seo')->take(6)->get();
     $services = Service::with('image', 'seo')->take(6)->get();
-    return view('frontend.landing', compact('fleets', 'services'));
+    $reviews = Review::with(['image'])->take(6)->latest()->get( ['id', 'name', 'message']);
+    return view('frontend.landing', compact('fleets', 'services','reviews'));
   }
 
   function service($url)

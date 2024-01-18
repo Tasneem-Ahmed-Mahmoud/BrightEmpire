@@ -6,19 +6,59 @@
    
 
   <div class="row">
-
+{{-- start --}}
     <div class="col-6 mb-4">
       <div class="card">
         <div class="card-body">
           <div class="card-title d-flex align-items-start justify-content-between">
            
           </div>
-          <span class="d-block mb-1">Services</span>
-          <h3 class="card-title text-nowrap mb-2">$2,456</h3>
+          <span class="d-block mb-1">Categories</span>
+          <h3 class="card-title text-nowrap mb-2">{{ $categories }}</h3>
           
         </div>
       </div>
     </div>
+{{-- start --}}
+<div class="col-6 mb-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title d-flex align-items-start justify-content-between">
+       
+      </div>
+      <span class="d-block mb-1">Services</span>
+      <h3 class="card-title text-nowrap mb-2">{{ $services }}</h3>
+      
+    </div>
+  </div>
+</div>
+{{-- start --}}
+<div class="col-6 mb-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title d-flex align-items-start justify-content-between">
+       
+      </div>
+      <span class="d-block mb-1">fleets</span>
+      <h3 class="card-title text-nowrap mb-2">{{ $fleets }}</h3>
+      
+    </div>
+  </div>
+</div>
+
+{{-- start --}}
+<div class="col-6 mb-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title d-flex align-items-start justify-content-between">
+       
+      </div>
+      <span class="d-block mb-1">Messages</span>
+      <h3 class="card-title text-nowrap mb-2">{{ $messages }}</h3>
+      
+    </div>
+  </div>
+</div>
   </div>
    
    
