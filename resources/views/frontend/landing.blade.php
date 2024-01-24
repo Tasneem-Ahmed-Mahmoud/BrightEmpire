@@ -136,8 +136,6 @@
                 <ul class="carousel">
                     <!-- start 1-->
                     @foreach ($reviews as $review )
-                        
-                
                     <li class="card" draggable="false">
                         <div class="card-img mt-3 py-2">
                             <img src="{{asset($review::PATH.$review->image->name)}}" alt="{{ $review->image->alt }}">

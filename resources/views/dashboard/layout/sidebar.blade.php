@@ -136,8 +136,29 @@
        
       </ul>
     </li>
+
+      {{-- Blogs --}}
+   
+
+      <li class="menu-item  ">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons bx bx-home-circle"></i>
+          <div data-i18n="Dashboards">Blog</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item ">
+            <a href="{{ route('blogs.index') }}" class="menu-link">
+              <div data-i18n="Analytics"> Blog</div>
+            </a>
+          </li>
+  
+          <li class="menu-item ">
+            <a href="{{ route('blogs.create') }}" class="menu-link">
+              <div data-i18n="Analytics">Add Blog</div>
+            </a>
+          </li>
      
-      {{-- Reviws --}}
+      {{-- Reviews --}}
    
 
      <li class="menu-item  ">

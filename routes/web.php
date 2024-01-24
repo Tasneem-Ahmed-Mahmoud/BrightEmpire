@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\BlogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\SystemController;
@@ -99,6 +100,12 @@ Route::controller(SystemController::class)->prefix('user')->name('system.')->gro
     Route::get('/password', 'password')->name('forget');
     Route::get('/quote', 'quote')->name('quote');
 });
+#################### Blogs #################################
+Route::controller(BlogController::class)->prefix('blogs')->name('blogs.')->group(function () {
+    Route::get('/{url}', 'single_blog')->name('single-blog');
+  
+});
+
 
 #################### contact#################################
 Route::controller(ContactController::class)->prefix('contact-us')->name('contact.')->group(function () {
