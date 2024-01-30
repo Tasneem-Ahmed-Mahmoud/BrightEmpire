@@ -19,7 +19,7 @@ class BlogCategoryRequest extends FormRequest
             'name' => 'required|unique:blog_categories|max:200'
         ];
         if ($this->method() == 'PUT') {
-            $role['name'] = 'required|max:200|unique:blog_categories,id,' . $this->BlogCategory->id;
+            $role['name'] = 'required|max:200|unique:blog_categories,id,' . $this->blogCategory->id;
         }
         return $role;
     }

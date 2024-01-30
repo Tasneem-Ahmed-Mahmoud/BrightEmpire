@@ -11,7 +11,7 @@ use App\Http\Controllers\Dashboard\FeatureController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\ServiceController;
 use App\Http\Controllers\Dashboard\CategoryController;
-
+use App\Http\Controllers\Dashboard\BlogCategoryController;
 ####################  Auth #################################
 
  Route::get('/login',[AuthController::class, 'login_form'])->name('admin-login');
@@ -52,13 +52,13 @@ Route::controller(BlogController::class)->prefix('blogs')->name('blogs.')->group
     Route::delete('/{blog}', 'destroy')->name('destroy'); 
 });
 #################### Blog Category #################################
-Route::controller(CategoryController::class)->prefix('blog-categories')->name('blog-categories.')->group(function () {
+Route::controller(BlogCategoryController::class)->prefix('blog-categories')->name('blog-categories.')->group(function () {
     Route::get('', 'index')->name('index');
     Route::get('/create', 'create')->name('create');
     Route::post('/', 'store')->name('store');
-    Route::get('/{blog-category}', 'edit')->name('edit');
-    Route::put('/{blog-category}', 'update')->name('update');
-    Route::delete('/{blog-category}', 'destroy')->name('destroy');
+    Route::get('/{blogCategory}', 'edit')->name('edit');
+    Route::put('/{blogCategory}', 'update')->name('update');
+    Route::delete('/{blogCategory}', 'destroy')->name('destroy');
 });
 
 ####################  Fleet #################################

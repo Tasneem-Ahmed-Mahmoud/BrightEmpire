@@ -9,12 +9,12 @@
            
          </div>
          <div class="card-body">
-           <form action="{{ route('blog-categories.update',$category->id) }}" method="POST" >
+           <form action="{{ route('blog-categories.update',$blogCategory->id) }}" method="POST" >
               @csrf
              @method('put')
              <div class="mb-3">
                <label class="form-label" for="basic-default-fullname">  Name</label>
-               <input type="text" class="form-control" id="basic-default-fullname" value="{{ old('name')?old('name'):$category->name }}" name="name">
+               <input type="text" class="form-control" id="basic-default-fullname" value="{{ old('name')?old('name'):$blogCategory->name }}" name="name">
                @error('name')
                    <small class="text-danger">{{ $message }}</small>
                @enderror

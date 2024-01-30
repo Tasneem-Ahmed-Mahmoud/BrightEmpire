@@ -24,7 +24,7 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $category->name }}</td>
             <td class="d-flex justify-content-between align-items-center">
-              <form action="{{ route('blog-categories.edit',$category->id) }}" mathod="post">
+              <form action="{{ route('blog-categories.edit', $category->id) }}" mathod="post">
                   @csrf
                   @method('put')
 

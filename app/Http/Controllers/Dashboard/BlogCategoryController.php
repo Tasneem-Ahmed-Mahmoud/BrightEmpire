@@ -41,14 +41,15 @@ class BlogCategoryController extends Controller
 
 
 
-    function edit(BlogCategory $category)
+    function edit(BlogCategory $blogCategory)
     {
-        return view('dashboard.blog-categories.edit', compact('category'));
+      
+        return view('dashboard.blog-categories.edit', compact('blogCategory'));
     }
 
-    function update(BlogCategoryRequest $request, BlogCategory $category)
+    function update(BlogCategoryRequest $request, BlogCategory $blogCategory)
     {
-        if ($category->update(['name' => $request->name])) {
+        if ($blogCategory->update(['name' => $request->name])) {
             Alert::success('success', 'updated successfully');
         } else {
             Alert::error('error', 'failed');
@@ -56,9 +57,9 @@ class BlogCategoryController extends Controller
         return redirect()->back();
     }
 
-    function destroy(BlogCategory $category)
+    function destroy(BlogCategory $blogCategory)
     {
-        if ($category->delete()) {
+        if ($blogCategory->delete()) {
             Alert::success('success', 'deleted successfully');
         } else {
             Alert::error('error', ' failed');

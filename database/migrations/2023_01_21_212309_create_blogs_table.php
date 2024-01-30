@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->longText('content');
-            $table->foreignId("blog_category_id")->nullable()->references('id')->on("blog_categories")->onDelete('se null');
+            $table->foreignId("blog_category_id")->nullable()->
+            references('id')->on("blog_categories")->onDelete('set null');
             $table->timestamps();
         });
     }

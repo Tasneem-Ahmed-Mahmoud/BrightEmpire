@@ -140,7 +140,7 @@
       {{-- Blogs --}}
    
 
-      <li class="menu-item  ">
+      <li class="menu-item  active">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Dashboards">Blog</div>
@@ -157,7 +157,28 @@
               <div data-i18n="Analytics">Add Blog</div>
             </a>
           </li>
-     
+        </ul>
+
+        <!-- blog categories -->
+
+        <li class="menu-item  active">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons bx bx-home-circle"></i>
+          <div data-i18n="Dashboards">Blog Categories</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item ">
+            <a href="{{ route('blog-categories.index') }}" class="menu-link">
+              <div data-i18n="Analytics"> Blog Categories</div>
+            </a>
+          </li>
+  
+          <li class="menu-item ">
+            <a href="{{ route('blog-categories.create') }}" class="menu-link">
+              <div data-i18n="Analytics">Add Blog Category</div>
+            </a>
+          </li>
+        </ul>
       {{-- Reviews --}}
    
 
