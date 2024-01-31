@@ -1,5 +1,5 @@
 <div class="col-lg-4 mt-5">
-    <div>
+    <div class="related-post">
 
 
         <div class="arrow-pointer d-flex justify-content-center align-items-center mb-3 w-75 ms-3 ">

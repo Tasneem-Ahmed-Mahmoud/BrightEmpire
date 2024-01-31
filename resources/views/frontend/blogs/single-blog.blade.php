@@ -9,6 +9,7 @@ $description=$blog->seo->description;
 <style>
     .blog img{
         width: 100%;
+        
     }
 </style>
 @endsection

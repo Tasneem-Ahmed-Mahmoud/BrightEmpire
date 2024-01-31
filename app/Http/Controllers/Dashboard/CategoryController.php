@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Models\Category;
+use App\Traits\DomTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -11,11 +12,11 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
-    //
+    use DomTrait;
     function index()
     {
         confirmDelete('delete', 'are you sure to delete?');
-        $categories = category::paginate(10, ['id','name','description','title']);
+        $categories = category::paginate(10, ['id','name','description','title','content']);
 
         return view('dashboard.categories.index', compact('categories'));
     }
@@ -31,8 +32,9 @@ function store(categoryRequest $request){
     DB::transaction(function ($query)use ($request) {
     $category=Category::create([
             'name'=>$request->name,
-            'description'=>$request->description,
-            'title'=>$request->title
+            'description'=>$$this->uploadContentFiles($request->description),
+            'title'=>$request->title,
+             'content'=>$this->uploadContentFiles($request->content)
     ]);
     
     $category->seo()->create([
@@ -66,8 +68,9 @@ function update(CategoryRequest $request,Category $category){
     DB::transaction(function ()use ($request,$category) {
     $category->update([
             'name'=>$request->name,
-            'description'=>$request->description,
-            'title'=>$request->title
+            'description'=>$this->uploadContentFiles($request->description),
+            'title'=>$request->title,
+            'content'=>$this->uploadContentFiles($request->content)
     ]);
     $category->seo()->update([
         'title'=>$request->seo_title,

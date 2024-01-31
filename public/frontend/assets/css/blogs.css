@@ -1,15 +1,5 @@
  
- .banner{
-    background:url('../images/_banner.jpg');
-    background: linear-gradient(rgba(48, 48, 59, 0.507),rgba(78,87,212,.438)),url('../images/_banner.jpg');
-       
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 17rem;
-    padding-bottom: 10rem;
-    max-height: auto;
-    }
+ 
     .bg-gold{
         background-color: var(--gold-color);
     }
@@ -38,7 +28,7 @@
     }
     
     
-    .single-blog ul li ,.blog ul li{
+    .single-blog .related-post ul li ,.blog ul li{
       padding: 1rem;
       background-color: var(--gold-color);
     }

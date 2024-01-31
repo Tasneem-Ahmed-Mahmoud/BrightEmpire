@@ -25,6 +25,7 @@ class CategoryRequest extends FormRequest
             'name' => 'required|unique:categories|max:200',
             'title'=>"required|max:250",
             'description' => 'required',
+            'content' => 'required',
             'url' => 'required|unique:seos|max:200',
             'seo_description' => 'required',
             'seo_title'=>'required:max:250'
