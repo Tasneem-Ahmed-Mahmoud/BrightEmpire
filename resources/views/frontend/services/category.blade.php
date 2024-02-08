@@ -4,11 +4,14 @@
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/service-new.css') }}">
 
 <style>
-   @media (max-width:500px){
-    .row>* {
-        padding-right: 0!important;
+    @media (max-width:500px) {
+        .row>* {
+            padding-right: 0 !important;
+        }
     }
-   }
+    a{
+    color: var(--gold-color);
+    }
 </style>
 @endsection
 @section('content')
@@ -28,12 +31,9 @@
 
                 <div class="  col-12 mb-5 ">
                     <div>
-                        <h2 class=" services-title text-capitalize mb-4">{{ $category->title }}</h2>
+                        <h1 class=" services-title text-capitalize mb-4">{{ $category->title }}</h1>
                         <div>
-
-                            @foreach (splitParagraph($category->description) as $text )
-                            <p>{{ $text .'.'}}</p>
-                            @endforeach
+                            {!! $category->description??''!!}
                         </div>
                     </div>
                 </div>
@@ -55,8 +55,7 @@
                         <div class="col-lg-4 col-md-6  p-2">
                             <a href="{{ route('service',$service->seo->url) }}">
                                 <div class="book-by-area-popular">
-                                    <img src="{{ asset($service::PATH.$service->image->name) }}" class="w-100"
-                                        style="height: 20rem" alt="Limousine Service to Boston">
+                                    <img src="{{ asset($service::PATH.$service->image->name) }}" class="w-100" style="height: 20rem" alt="Limousine Service to Boston">
                                     <h3 class="title">{{ $service->name }}</h3>
                                 </div>
 
@@ -64,6 +63,12 @@
                         </div>
 
                         @endforeach
+                    </div>
+
+                    <div class="col-12">
+                    <div class="mt-4">
+{!! $category->content??''!!}
+                        </div>
                     </div>
                 </div>
 
@@ -75,3 +80,18 @@
 
 
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
