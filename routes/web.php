@@ -103,7 +103,7 @@ Route::controller(SystemController::class)->prefix('user')->name('system.')->gro
 #################### Blogs #################################
 Route::controller(BlogController::class)->prefix('blogs')->name('blogs.')->group(function () {
     Route::get('/{url}', 'single_blog')->name('single-blog');
-  
+    Route::get('/', 'blogs')->name('blogs');
 });
 
 
@@ -129,9 +129,9 @@ Route::get('about-us', function () {
     return view('frontend/about');
 })->name('about');
 // ################# blogs ###########################
-Route::get('blogs', function () {
-    return view('frontend/blogs/blog');
-})->name('blogs');
+// Route::get('blogs', function () {
+//     return view('frontend/blogs/blog');
+// })->name('blogs');
 Route::get('blogs/advantage-of-limo', function () {
     return view('frontend/blogs/advantage-of-limo');
 })->name('advantage-of-limo');

@@ -17,6 +17,10 @@ class BlogController extends Controller
   
   }
 
-
+function blogs(){
+  $blogs=Blog::with(['image', 'seo'])->latest()->paginate(7,['id','title','description']);
+  dd($blogs);
+  return view('frontend.blogs.blogs', compact("blogs"));
+}
 
 }

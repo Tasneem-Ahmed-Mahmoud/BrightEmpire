@@ -62,7 +62,8 @@ class CategoryController extends Controller
 
     function update(CategoryRequest $request, Category $category)
     {
-        //dd($this->uploadContentFiles($request->content));
+        // dd($request->all());
+        ($this->uploadContentFiles($request->content));
        $description=($this->uploadContentFiles($request->description));
         try {
             DB::transaction(function () use ($request, $category,$description) {
@@ -70,12 +71,12 @@ class CategoryController extends Controller
                 // dd($description);
                 $category->description=$description;
                 $category->save();
-                 dd($category->description);
+                //  dd($category);
                 $category->update([
-                    'name' => $request->name,
-                    // 'description' => $description,
+                     'name' => $request->name,
+                    'description' => $description,
                     'title' => $request->title,
-                    'content' => $this->uploadContentFiles($request->content)
+                   'content' => $this->uploadContentFiles($request->content)
                 ]);
                 $category->seo()->update([
                     'title' => $request->seo_title,

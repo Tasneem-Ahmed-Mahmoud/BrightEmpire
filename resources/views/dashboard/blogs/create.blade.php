@@ -18,10 +18,10 @@
 
         </div>
         <div class="card-body">
-          <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
+          <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data" class="row">
             @csrf
 
-            <div class="mb-3">
+            <div class="mb-3 col-6">
               <label class="form-label" for="basic-default-fullname"> Title</label>
               <input type="text" class="form-control" id="basic-default-fullname" value="{{ old('title')??'' }}"
                 name="title">
@@ -29,7 +29,18 @@
               <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
-            <div class="mb-3">
+            <div class="mt-2 mb-3 col-6">
+              <label for="largeSelect" class="form-label">Category</label>
+              <select id="largeSelect" class="form-control" name="blog_category_id">
+               @foreach ($blog_categories as $category )
+               <option value="{{ $category->id }}">{{ $category->name }}</option>
+               @endforeach
+               @error('blog_category_id')
+               <small class="text-danger">{{ $message }}</small>
+              @enderror
+              </select>
+            </div>
+            <div class="mb-3 col-12">
               <label for="exampleFormControlTextarea1" class="form-label">Description</label>
               <textarea  class="form-control" id="exampleFormControlTextarea1" rows="10"
                 name="description">{{ old('description')??'' }}</textarea>
@@ -37,21 +48,21 @@
               <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
-            <div class="mb-3">
+            <div class="mb-3 col-6">
               <label for="formFile" class="form-label">Image</label>
               <input class="form-control" type="file" id="formFile" name="image">
               @error('image')
               <small class="text-danger">{{ $message }}</small>
           @enderror
             </div>
-            <div class="mb-3">
+            <div class="mb-3 col-6">
               <label class="form-label" for="basic-default-fullname"> Image Alt</label>
               <input type="text" class="form-control" id="basic-default-fullname" value="{{ old('alt')??'' }}" name="alt">
               @error('alt')
                   <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
-            <div class="mb-3">
+            <div class="mb-3 col-12">
               <label for="exampleFormControlTextarea1" class="form-label">Content</label>
               <textarea id="content" class="form-control" id="exampleFormControlTextarea1" rows="10"
                 name="content">{{ old('content')??'' }}</textarea>
@@ -60,7 +71,7 @@
               @enderror
             </div>
           
-            <div class="mb-3">
+            <div class="mb-3 col-6">
               <label class="form-label" for="basic-default-fullname"> Url</label>
               <input type="text" class="form-control" id="basic-default-fullurl" value="{{ old('url')??'' }}"
                 name="url">
@@ -68,7 +79,7 @@
               <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
-            <div class="mb-3">
+            <div class="mb-3 col-6">
               <label class="form-label" for="basic-default-fullname"> SEO Title</label>
               <input type="text" class="form-control" id="basic-default-fullname" value="{{ old('seo_title')??'' }}"
                 name="seo_title">

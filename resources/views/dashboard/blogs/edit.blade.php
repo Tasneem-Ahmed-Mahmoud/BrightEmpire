@@ -18,11 +18,11 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('blogs.update',$blog->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('blogs.update',$blog->id) }}" method="POST" enctype="multipart/form-data" class="row">
                         @csrf
                         @method('put')
 
-                        <div class="mb-3">
+                        <div class="mb-3 col-6">
                             <label class="form-label" for="basic-default-fullname"> Title</label>
                             <input type="text" class="form-control" id="basic-default-fullname"
                                 value="{{ old('title')?old('title'):$blog->title }}" name="title">
@@ -30,7 +30,18 @@
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="mt-2 mb-3">
+                            <label for="largeSelect" class="form-label">Category</label>
+                            <select id="largeSelect" class="form-control" name="blog_category_id">
+                             @foreach ($blog_categories as $category )
+                             <option value="{{ $category->id }}"  {{ $blog->blog_category_id==$category->id?'selected':'' }}>{{ $category->name }}</option>
+                             @endforeach
+                             @error('category_id')
+                             <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                            </select>
+                          </div>
+                        <div class="mb-3 col-12">
                             <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
                                 name="description">{{ old('description')?old('description'):$blog->description }}</textarea>
@@ -38,7 +49,7 @@
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 col-6 ">
                             <label for="formFile" class="form-label">Image</label>
                             <input class="form-control" type="file" id="formFile" name="image">
                             @error('image')
@@ -47,7 +58,7 @@
                             <img src="{{ asset($blog::PATH.$blog->image->name) }}" style="width: 5rem;height:5rem">
                
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 col-6">
                             <label class="form-label" for="basic-default-fullname"> Image Alt</label>
                             <input type="text" class="form-control" id="basic-default-fullname"
                                 value="{{ old('alt')?old('alt'):$blog->image->alt }}" name="alt">
@@ -55,7 +66,7 @@
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 col-12">
                             <label for="exampleFormControlTextarea1" class="form-label">Content</label>
                             <textarea id="content" class="form-control" id="exampleFormControlTextarea1" rows="10"
                                 name="content">{!! old('content')?old('content'):$blog->content !!}</textarea>
@@ -64,7 +75,7 @@
                             @enderror
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-3 col-6">
                             <label class="form-label" for="basic-default-fullname"> Url</label>
                             <input type="text" class="form-control" id="basic-default-fullurl"
                                 value="{{ old('url')? old('url'):$blog->seo->url}}" name="url">
@@ -72,7 +83,7 @@
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 col-6">
                             <label class="form-label" for="basic-default-fullname"> SEO Title</label>
                             <input type="text" class="form-control" id="basic-default-fullname"
                                 value="{{ old('seo_title')?old('seo_title'):$blog->seo->title }}" name="seo_title">
@@ -80,7 +91,7 @@
                             <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 col-12">
                             <label for="exampleFormControlTextarea1" class="form-label"> SEO Description</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
                                 name="seo_description">{{ old('seo_description')?old('seo_description'):$blog->seo->description }}</textarea>

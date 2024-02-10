@@ -6,19 +6,13 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class BlogRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
+    
     public function authorize(): bool
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
+   
     public function rules(): array
     {
         $role = [
@@ -31,6 +25,7 @@ class BlogRequest extends FormRequest
             'url' => 'required|unique:seos|max:200',
             'seo_description' => 'required',
             'seo_title'=>'required:max:250',
+            'blog_category_id'=>"required|exists:blog_categories,id"
            
         ];
 
