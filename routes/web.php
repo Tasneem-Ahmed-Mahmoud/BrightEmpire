@@ -101,7 +101,7 @@ Route::controller(SystemController::class)->prefix('user')->name('system.')->gro
     Route::get('/quote', 'quote')->name('quote');
 });
 #################### Blogs #################################
-Route::controller(BlogController::class)->prefix('blogs')->name('blogs.')->group(function () {
+Route::controller(BlogController::class)->prefix('blogs')->group(function () {
     Route::get('/{url}', 'single_blog')->name('single-blog');
     Route::get('/', 'blogs')->name('blogs');
 });
@@ -156,8 +156,8 @@ Route::get('blogs/unveiling-the-different-types-of-limos-services', function () 
     return view('frontend/blogs/types-of-limousines');
 })->name('types-of-limousines');
 
-Route::get('blogs/navigate-nyc-in-luxury-at-an-affordable-price-for-limo', function () {
-    return view('frontend/blogs/navigate-nyc-in-luxury');
-})->name('navigate-nyc-in-luxury');
+// Route::get('blogs/navigate-nyc-in-luxury-at-an-affordable-price-for-limo', function () {
+//     return view('frontend/blogs/navigate-nyc-in-luxury');
+// })->name('navigate-nyc-in-luxury');
 
  
